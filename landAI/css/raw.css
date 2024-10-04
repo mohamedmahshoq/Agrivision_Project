@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF7F1;
+    color: #16423c;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+header {
+    background-color: #ad6a6c;
+    color: #e8d6cb;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: #FFF7F1;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+}
+
+.location-selector {
+    text-align: center;
+    margin: 20px;
+}
+
+select {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #FF204E;
+    transition: border-color 0.3s ease;
+}
+
+select:hover {
+    border-color: #6A9C89;
+}
+
+.price-details {
+    background-color: #E9EFEC;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+}
+
+.price-details h2 {
+    text-align: center;
+    margin: 0;
+}
+
+/* Scaling effect on hover */
+.price-details:hover {
+    transform: scale(1.05); /* Slightly enlarge the box */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Footer */
+footer {
+    background: #ad6a6c;
+    color: #e8d6cb;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #FF204E;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 5px 0;
+}

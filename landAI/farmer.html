@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers List</title>
+    <link rel="stylesheet" href="css/farmer.css">
+</head>
+<body>
+
+    <header>
+        <h1>Farmers in Your Area</h1>
+    </header>
+
+    <section class="description">
+        <p>Select a location from the dropdown menu to see the details of farmers in that area, including their contact information and an embedded map.</p>
+        <label for="location">Choose Location:</label>
+        <select id="location">
+            <option value="nagercoil">Nagercoil</option>
+            <option value="kanniyakumari">Kanniyakumari</option>
+            <option value="thuckalay">Thuckalay</option>
+            <option value="marthandam">Marthandam</option>
+        </select>
+        <button onclick="loadFarmers()">Show Farmers</button>
+    </section>
+
+    <section class="farmer-container" id="farmer-list">
+        <!-- Farmer details will be dynamically injected here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+    </footer>
+
+    <div class="overlay" id="map-overlay">
+        <div class="overlay-content">
+            <h2>Location Map</h2>
+            <div id="map"></div>
+            <button onclick="closeOverlay()">Close</button>
+        </div>
+    </div>
+   <center> <button id="back-button">Back</button></center>
+
+    <script src="js/farmer.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/agtech.css">
+    <title>Agricultural Technology</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <!-- <li><a href="agri.html">Agriculture</a></li> -->
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="description">
+            <h1>Your Location is Confirmed</h1>
+        </section>
+
+        <section class="input-grid">
+            <form id="landForm">
+                <label for="dimensions">Land Dimensions (Height x Width):</label>
+                <input type="text" id="dimensions" name="dimensions" required>
+
+                <label for="area">Land Area (in cents):</label>
+                <input type="number" id="area" name="area" required>
+
+                <label for="soil-type">Soil Type:</label>
+                <select id="soil-type" name="soil-type" required>
+                    <option value="Alluvial Soil">Alluvial Soil</option>
+                    <option value="Red Soil">Red Soil</option>
+                    <option value="Black Soil">Black Soil</option>
+                    <option value="Arid/Desert Soil">Arid/Desert Soil</option>
+                </select>
+
+                <button type="submit" class="get-recommendation">Get Recommendation</button>
+            </form>
+        </section>
+        <center> <button id="back-button">Back</button></center>
+    </main>
+
+    <footer>
+        <p>Contact us: agrivisionn@gmail.com | 9442960532</p>
+    </footer>
+
+    <script src="js/agtech.js"></script>
+</body>
+</html>

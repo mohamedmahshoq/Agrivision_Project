@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Shop</title>
+    <link rel="stylesheet" href="css/build-shop.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Profitable Shops Guide</h1>
+    </header>
+
+    <!-- Description -->
+    <section class="description">
+        <p>Choose the best shop to build in your area based on location and population density. Whether you have land and need guidance or already know your preferred shop type, we've got you covered.</p>
+    </section>
+
+    <!-- Main Section -->
+    <div class="container">
+        <!-- Section for users needing suggestions -->
+        <section class="suggestions-section">
+            <h2>Find Profitable Shops Based on Location</h2>
+            <div class="input-group">
+                <label for="location">Select Location:</label>
+                <select id="location">
+                    <option value="nagercoil">Nagercoil</option>
+                    <option value="kanniyakumari">Kanniyakumari</option>
+                    <option value="marthandam">Marthandam</option>
+                    <option value="thuckalay">Thuckalay</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="density">Select Population Density:</label>
+                <select id="density">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <button id="findProfitableShopsBtn">Find Profitable Shops</button>
+        </section>
+
+        <!-- Section for users with prior knowledge -->
+        <section class="knowledge-section">
+            <h2>Already Know Your Shop?</h2>
+            <div class="input-group">
+                <label for="location-2">Select Location:</label>
+                <select id="location-2">
+                    <option value="nagercoil">Nagercoil</option>
+                    <option value="kanniyakumari">Kanniyakumari</option>
+                    <option value="marthandam">Marthandam</option>
+                    <option value="thuckalay">Thuckalay</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="shopType">Select Shop Type:</label>
+                <select id="shopType">
+                    <option value="supermarket">Supermarket</option>
+                    <option value="cafe">Café</option>
+                    <option value="pharmacy">Pharmacy</option>
+                    <option value="tech-store">Electronics/Tech Store</option>
+                    <option value="convenience-store">Convenience Store</option>
+                    <option value="grocery-store">Grocery Store</option>
+                    <option value="hardware-store">Hardware Store</option>
+                    <option value="boutique">Boutique</option>
+                    <option value="fitness-center">Fitness Center</option>
+                    <option value="daycare">Daycare Center</option>
+                </select>
+            </div>
+            <button id="checkProfitsBtn">Check Profits</button>
+            <div id="profit-box" class="box-shadow"></div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Shop Profits Inc.</p>
+    </footer>
+
+    <!-- Overlay for Existing Shops -->
+    <!-- <div id="overlay">
+        <div id="overlay-content">
+            <h3>This shop is already existing in your area.</h3>
+            <button id="proceed-btn">Proceed to Shop Details</button>
+        </div>
+    </div> -->
+
+    <script src="js/build-shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF7F1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #FF204E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Description Styles */
+.description {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Buy/Sell Section */
+.buy-sell-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows responsiveness */
+    margin: 20px;
+}
+
+.buy-land, .sell-land {
+    background: #E78895;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: calc(45% - 40px); /* Adjusted for margins */
+    margin: 10px; /* Added margin for spacing */
+}
+
+/* Input Fields */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+select, input[type="file"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.3s;
+}
+
+select:focus, input:focus {
+    border-color: #FF204E;
+}
+
+/* Button Styles */
+button {
+    background-color: #FF204E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold; /* Make button text bold */
+}
+
+button:hover {
+    background-color: #E78895;
+}
+
+/* Overlay Styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.overlay-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #E78895;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .buy-land, .sell-land {
+        width: 100%; /* Stack sections on smaller screens */
+    }
+}

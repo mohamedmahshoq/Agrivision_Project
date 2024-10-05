@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy/Sell Land</title>
+    <link rel="stylesheet" href="css/buy-sell-land.css"> <!-- Link to your CSS -->
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Buy and Sell Land</h1>
+    </header>
+
+    <!-- Description -->
+    <section class="description">
+        <p>Find the perfect land to buy or sell your property with ease. Use the tools below to navigate, and explore the available options.</p>
+    </section>
+
+    <!-- Two Sections: Buy and Sell Land -->
+    <section class="buy-sell-section">
+
+        <!-- Buy Land Section -->
+        <div class="buy-land">
+            <h2>Land Details to Buy</h2>
+
+            <!-- Location Dropdown -->
+            <label for="location">In which location do you wish to buy land?</label>
+            <select id="location" name="location" onchange="displayMap()">
+                <option value="">Select Location</option>
+                <option value="nagercoil">Nagercoil</option>
+                <option value="kanniyakumari">Kanniyakumari</option>
+                <option value="thuckalay">Thuckalay</option>
+                <option value="marthandam">Marthandam</option>
+            </select>
+
+            <!-- Map will be displayed here based on user selection -->
+            <div id="map-container"></div>
+
+            <!-- Other Inputs -->
+            <label for="land-size">How many cents?</label>
+            <select id="land-size" name="land-size">
+                <!-- Dropdown for land size from 1 cent to 100 cents -->
+                <option value="">Select Cents</option>
+                <!-- Add dynamically -->
+            </select>
+
+            <label for="dtcp-approved">Are you looking for DTCP approved plot?</label>
+            <select id="dtcp-approved" name="dtcp-approved">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="land-type">Type of Land</label>
+            <select id="land-type" name="land-type">
+                <option value="residential">Residential Land</option>
+                <option value="commercial">Commercial Land</option>
+                <option value="agricultural">Agricultural Land</option>
+                <option value="industrial">Industrial Land</option>
+                <option value="recreational">Recreational Land</option>
+                <option value="mixed-use">Mixed-Use Land</option>
+                <option value="raw-land">Raw Land</option>
+                <option value="brownfield">Brownfield Land</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button id="submit-details" onclick="showOverlay()">Submit Details</button>
+        </div>
+
+        <!-- Sell Land Section -->
+        <div class="sell-land">
+            <h2>Land Details to Sell</h2>
+
+            <!-- Location Dropdown -->
+            <label for="sell-location">Where is the land located?</label>
+            <select id="sell-location" name="sell-location" onchange="displaySellMap()">
+                <option value="">Select Location</option>
+                <option value="nagercoil">Nagercoil</option>
+                <option value="kanniyakumari">Kanniyakumari</option>
+                <option value="thuckalay">Thuckalay</option>
+                <option value="marthandam">Marthandam</option>
+            </select>
+
+            <!-- Map will be displayed here based on user selection -->
+            <div id="sell-map-container"></div>
+
+            <!-- Other Inputs -->
+            <label for="sell-image">Add Image</label>
+            <input type="file" id="sell-image" name="sell-image" accept="image/*">
+
+            <label for="dtcp-approved-sell">Is this a DTCP-approved plot?</label>
+            <select id="dtcp-approved-sell" name="dtcp-approved-sell">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="market-rate">Market Rate</label>
+            <input type="number" id="market-rate" name="market-rate" placeholder="Enter market rate per cent">
+
+            <label for="expected-rate">Expected Rate</label>
+            <input type="number" id="expected-rate" name="expected-rate" placeholder="Enter your expected rate per cent">
+
+            <!-- Publish Button -->
+            <button id="publish-land" onclick="showSellOverlay()">Publish Land</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Buy and Sell Land Portal</p>
+    </footer>
+
+    <!-- Overlay for Submit Confirmation -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <p>Are you sure you want to submit the details?</p>
+            <button onclick="proceedToSeek()">Proceed</button>
+        </div>
+    </div>
+
+    <!-- Overlay for Sell Confirmation -->
+    <div id="sell-overlay" class="overlay">
+        <div class="overlay-content">
+            <p>Are you sure you want to publish the land details?</p>
+            <button onclick="proceedToPublish()">Proceed</button>
+        </div>
+    </div>
+
+    <script src="js/buy-sell-land.js"></script>
+</body>
+</html>

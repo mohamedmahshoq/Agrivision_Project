@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:  #ad6a6c;
+    color: #FFF7F1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2em;
+}
+
+footer {
+    background-color:  #ad6a6c;
+    color: #FFF7F1;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.description {
+    text-align: center;
+    padding: 20px;
+}
+
+#location {
+    padding: 10px;
+    font-size: 1em;
+    margin: 0 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #E78895;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF204E;
+}
+
+/* Farmer Cards */
+.farmer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.farmer-card {
+    background-color: #FFF7F1;
+    border: 2px solid #E78895;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.farmer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.farmer-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.farmer-card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.farmer-card button {
+    background-color: #FF204E;
+}
+
+/* Map Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-content {
+    background-color: #FFF7F1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+#back-button {
+    background-color:  #ad6a6c; /* Primary color */
+    color: #FFF7F1; /* Light text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#back-button:hover {
+    background-color: #E78895; /* Hover color */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+#back-button:active {
+    transform: scale(0.98); /* Slight shrink on click */
+}
+
+
+.overlay-content h2 {
+    margin-bottom: 20px;
+}
+
+.overlay-content button {
+    background-color: #FF204E;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .farmer-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .farmer-card {
+        width: 100%;
+    }
+}

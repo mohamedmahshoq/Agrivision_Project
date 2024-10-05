@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Construction Companies</title>
+  <link rel="stylesheet" href="css/find.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/IMG_1786.PNG" alt="Company Logo">
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="javascript:history.back()">Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Find Construction Companies</h1>
+
+        <label for="location">Select Location:</label>
+        <select id="location" onchange="showCompanies()">
+            <option value="">-- Select a Location --</option>
+            <option value="nagercoil">Nagercoil</option>
+            <option value="kanniyakumari">Kanniyakumari</option>
+            <option value="thuckalay">Thuckalay</option>
+            <option value="marthandam">Marthandam</option>
+        </select>
+
+        <div class="company-details" id="company-details"></div>
+    </div>
+
+   
+    <!-- <script>
+        const companies = {
+            nagercoil: [
+                {
+                    name: "Sabeetha Constructions",
+                    description: "Best Builders in Nagercoil | Residential & Commercial Construction",
+                    address: "Town Railway station road, 3/2-55B2, Pallivilai Rd, Mela Theru Karai, Nagercoil, Tamil Nadu 629003",
+                    phone: "09894759423",
+                    website: "https://sabeethaconstructions.in/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31594.195451579446!2d77.39388954156964!3d8.175084078773322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f1137ec2d281%3A0xeabba70ed7f4444f!2sSabeetha%20Constructions!5e0!3m2!1sen!2sin!4v1726798054064!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                },
+                {
+                    name: "Modern Construction",
+                    description: "Home builder in Nagercoil",
+                    address: "VA COMPLEX, 90 B1, VALLANKUMARANVILAI, Kottar, Nagercoil, Tamil Nadu 629002",
+                    phone: "07530093024",
+                    website: "https://www.modernconstructions.in/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31594.195451579446!2d77.39388954156964!3d8.175084078773322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f1daf2963e45%3A0xf6f47061b0d9ebca!2sModern%20Construction!5e0!3m2!1sen!2sin!4v1726798192539!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                },
+                {
+                    name: "VJ Construction",
+                    description: "Real Estate Builders & Construction Company",
+                    address: "WCC Junction, VJ Construction, Palace Rd, Nagercoil, Tamil Nadu 629001",
+                    phone: "09488778640",
+                    website: "https://www.vjconstruction.in/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31594.195451579446!2d77.39388954156964!3d8.175084078773322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f1d9fbe91ecb%3A0x149208b6867e6dbc!2sVJ%20CONSTRUCTION!5e0!3m2!1sen!2sin!4v1726798346231!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                }
+            ],
+            kanniyakumari: [
+                {
+                    name: "Kumar Constructions",
+                    description: "Specialists in Residential Buildings in Kanniyakumari",
+                    address: "Kumar Street, Main Road, Kanniyakumari, Tamil Nadu 629702",
+                    phone: "09087765432",
+                    website: "https://kumarconstructions.com/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39364.84826781861!2d77.5354453428902!3d8.08681534156359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b051f93a734b9ed%3A0x987659876545fabc!2sKumar%20Constructions!5e0!3m2!1sen!2sin!4v1726798412842!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                },
+                {
+                    name: "Seashore Builders",
+                    description: "Affordable Beachfront Properties",
+                    address: "Seashore Road, Kanniyakumari, Tamil Nadu 629702",
+                    phone: "08123456789",
+                    website: "https://seashorebuilders.in/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39364.84826781861!2d77.5354453428902!3d8.08681534156359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b051f93a734b9ed%3A0xfddfc0a73654b9ca!2sSeashore%20Builders!5e0!3m2!1sen!2sin!4v1726798522341!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                },
+                {
+                    name: "Kumari Builders",
+                    description: "Residential & Commercial Builders",
+                    address: "Kanyakumari Street, Main Road, Kanniyakumari, Tamil Nadu 629702",
+                    phone: "09287654321",
+                    website: "https://kumaribuilders.com/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39364.84826781861!2d77.5354453428902!3d8.08681534156359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b051f93a734b9ed%3A0xf8d134a7d3625c9a!2sKumari%20Builders!5e0!3m2!1sen!2sin!4v1726798614133!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                }
+            ],
+            thuckalay: [
+                {
+                    name: "Srinivasan Builders",
+                    description: "Leading Builders in Thuckalay for Modern Homes",
+                    address: "Srinivasan Nagar, Thuckalay, Tamil Nadu 629175",
+                    phone: "09765432109",
+                    website: "https://srinivasanbuilders.com/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31277.75158288147!2d77.29189105016336!3d8.07505013589026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0517fcb58d2b77%3A0xf0b59f89ef6357c4!2sSrinivasan%20Builders!5e0!3m2!1sen!2sin!4v1726798708465!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                },
+                {
+                    name: "Thuckalay Constructions",
+                    description: "Quality Construction Services in Thuckalay",
+                    address: "Thuckalay Main Road, Thuckalay, Tamil Nadu 629175",
+                    phone: "09012345678",
+                    website: "https://thuckalayconstructions.com/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31277.75158288147!2d77.29189105016336!3d8.07505013589026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0517fcb58d2b77%3A0x85f7f39b7dfb92d4!2sThuckalay%20Constructions!5e0!3m2!1sen!2sin!4v1726798780238!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                },
+                {
+                    name: "ABC Builders",
+                    description: "Trusted Builders in Thuckalay",
+                    address: "ABC Nagar, Thuckalay, Tamil Nadu 629175",
+                    phone: "08876543210",
+                    website: "https://abcbuilderstt.com/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31277.75158288147!2d77.29189105016336!3d8.07505013589026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0517fcb58d2b77%3A0xef56715b4d7e7b2f!2sABC%20Builders!5e0!3m2!1sen!2sin!4v1726798851234!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                }
+            ],
+            marthandam: [
+                {
+                    name: "Marthandam Constructions",
+                    description: "Reliable Builders in Marthandam",
+                    address: "Marthandam Main Road, Marthandam, Tamil Nadu 629165",
+                    phone: "09432167890",
+                    website: "https://marthandamconstructions.com/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31277.75158288147!2d77.41189105016336!3d8.04505013589026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0517fcb58d2b77%3A0xf0b59f89ef6357c4!2sMarthandam%20Constructions!5e0!3m2!1sen!2sin!4v1726798958465!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                },
+                {
+                    name: "XYZ Builders",
+                    description: "Quality Homes at Affordable Prices",
+                    address: "XYZ Nagar, Marthandam, Tamil Nadu 629165",
+                    phone: "09543217890",
+                    website: "https://xyzbuilders.com/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31277.75158288147!2d77.41189105016336!3d8.04505013589026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0517fcb58d2b77%3A0x85f7f39b7dfb92d4!2sXYZ%20Builders!5e0!3m2!1sen!2sin!4v1726799031234!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                },
+                {
+                    name: "Happy Homes",
+                    description: "Building Dreams in Marthandam",
+                    address: "Happy Homes Road, Marthandam, Tamil Nadu 629165",
+                    phone: "09123456789",
+                    website: "https://happyhomes.com/",
+                    map: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31277.75158288147!2d77.41189105016336!3d8.04505013589026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0517fcb58d2b77%3A0xef56715b4d7e7b2f!2sHappy%20Homes!5e0!3m2!1sen!2sin!4v1726799112345!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>'
+                }
+            ]
+        };
+
+        function showCompanies() {
+            const location = document.getElementById("location").value;
+            const detailsDiv = document.getElementById("company-details");
+            detailsDiv.innerHTML = '';
+
+            if (location && companies[location]) {
+                companies[location].forEach(company => {
+                    const companyInfo = `
+                        <div class="company">
+                            <h2>${company.name}</h2>
+                            <p><strong>Description:</strong> ${company.description}</p>
+                            <p><strong>Address:</strong> ${company.address}</p>
+                            <p><strong>Phone:</strong> ${company.phone}</p>
+                            <p><a href="${company.website}" target="_blank">Visit Website</a></p>
+                            <div class="map">${company.map}</div>
+                        </div>
+                    `;
+                    detailsDiv.innerHTML += companyInfo;
+                });
+            } else {
+                detailsDiv.innerHTML = '<p>No companies found for this location.</p>';
+            }
+        }
+        </script> -->
+        <footer>
+            <p>Contact us: msmahshoq@landowner.com | +123 456 7890</p>
+            <p>Locations: Office 1, City; Office 2, Town</p>
+        </footer>
+    <script src="js/find.js"></script>
+
+</body>
+</html>

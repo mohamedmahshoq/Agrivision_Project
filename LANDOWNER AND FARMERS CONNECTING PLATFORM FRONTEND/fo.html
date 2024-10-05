@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer and Landowner Login</title>
+    <link rel="stylesheet" href="fo.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="background-image">
+            <div class="description">
+                <h1>Welcome to our platform</h1>
+                <p>Please select your role to proceed</p>
+                <button class="farmer-login">Farmer Login</button>
+                <button class="landowner-login">Landowner Login</button>
+            </div>
+        </section>
+        <section class="login-forms">
+            <div class="farmer-form" style="display: none;">
+                <h2>Farmer Details</h2>
+                <form>
+                    <label for="farmer-name">Name:</label>
+                    <input type="text" id="farmer-name" name="farmer-name"><br><br>
+                    <label for="farmer-email">Email:</label>
+                    <input type="email" id="farmer-email" name="farmer-email"><br><br>
+                    <label for="farmer-phone">Phone:</label>
+                    <input type="tel" id="farmer-phone" name="farmer-phone"><br><br>
+                    <button>Submit</button>
+                </form>
+            </div>
+            <div class="landowner-form" style="display: none;">
+                <h2>Landowner Details</h2>
+                <form>
+                    <label for="landowner-name">Name:</label>
+                    <input type="text" id="landowner-name" name="landowner-name"><br><br>
+                    <label for="landowner-email">Email:</label>
+                    <input type="email" id="landowner-email" name="landowner-email"><br><br>
+                    <label for="landowner-phone">Phone:</label>
+                    <input type="tel" id="landowner-phone" name="landowner-phone"><br><br>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Farmer and Landowner Platform</p>
+    </footer>
+    <script src="fo.js"></script>
+</body>
+</html>

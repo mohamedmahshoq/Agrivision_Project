@@ -1,0 +1,242 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background-color: #ffffff; /* Green background */
+  color: rgb(0, 0, 0);
+  padding: 15px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.navbar .logo img {
+  max-width: 100px; /* Logo size */
+}
+
+nav {
+  flex: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: rgb(4, 4, 4);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #59ff00; /* Light grey on hover */
+}
+
+/* Search Bar Styles */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 200px; /* Fixed width for search input */
+}
+
+.search-container i {
+  cursor: pointer;
+  color: rgb(8, 253, 20);
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+}
+
+.advertisement img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Fresh Recommendations Styles */
+.fresh-recommendations {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.fresh-recommendations h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: calc(33.333% - 20px); /* Three cards per row */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.img-featured {
+  position: relative;
+}
+
+.img-featured img {
+  width: 100%;
+  height: auto;
+}
+
+.featured {
+  background-color: #f0ad4e; /* Bootstrap warning color */
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.name-heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name-heart h4 {
+  margin-bottom: 10px;
+}
+
+/* Load More Button Styles */
+.load-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.load-more-btn {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #45a049; /* Darker green */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card {
+      width: calc(50% - 20px); /* Two cards per row */
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .search-container {
+      flex-direction: column;
+  }
+
+  .search-container input {
+      margin-bottom: 10px;
+      width: 100%; /* Full width on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 100%; /* One card per row */
+  }
+
+  nav ul li {
+      margin: 0 5px;
+  }
+
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+
+.sell-product-btn {
+  background-color: #ffffff; /* Blue background */
+  color: rgb(0, 0, 0); /* White text */
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.sell-product-btn:hover {
+  background-color: #000000; /* Darker blue on hover */
+}
+video {
+  width: 100%;
+  object-fit: cover; /* optional, to make the video cover the entire width */
+  
+}

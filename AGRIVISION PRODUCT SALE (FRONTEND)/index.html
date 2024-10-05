@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Fresh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="farm fresh.png" alt="Farm Fresh Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://www.example.com/vegetables/">Vegetables</a></li>
+                    <li><a href="https://www.example.com/fruits/">Fruits</a></li>
+                    <li><a href="https://www.example.com/dairy/">Dairy</a></li>
+                    <li><a href="sell_product.html" class="sell-product-btn">Sell Product</a></li> <!-- Added button -->
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Jamshed Town, Karachi">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="txt" placeholder="Find Fresh Produce...">
+                <i class="fa-solid fa-search" onclick="search()"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="advertisement">
+            <video width="100%" autoplay loop>
+                <source src="videoplayback.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+        </section>
+
+        <section class="fresh-recommendations">
+            <h1>Fresh Recommendations</h1>
+            <div class="cards-container" id="cards">
+                <div class="card">
+                    <a href="rice.html">
+                        <div class="img-featured">
+                            <img src="istockphoto-1149949974-612x612.jpg" alt="Ponni Rice">
+                            <p class="featured">Featured</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="name-heart">
+                                <h4>RICE (Ponni)</h4>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <h4>Rs.47.73 / per kg</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="img-featured">
+                        <a href="carrot.html">
+                            <img src="cadnav-1FHH02521-50.jpg" alt="Product Name">
+                            <p class="featured">Featured</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="name-heart">
+                                <h4>CARROT</h4>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <h4>Rs.27.09/ per kg</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="img-featured">
+                        <a href="apple.html">
+                            <img src="images.jpeg" alt="Product Name">
+                            <p class="featured">Featured</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="name-heart">
+                                <h4>APPLE</h4>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <h4>Rs.125.23/ per kg</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- More cards can be added here -->
+            </div>
+
+            <div class="load-more">
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Farm Fresh. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

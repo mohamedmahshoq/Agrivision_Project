@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Product - Farm Fresh</title>
+    <link rel="stylesheet" href="sell_product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container"> 
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="./index.html"><img src="farm fresh.png" alt="Farm Fresh Logo"></a>
+                </div>
+                <ul>
+                    <li><a href="#">Vegetables</a></li>
+                    <li><a href="#">Fruits</a></li>
+                    <li><a href="#">Dairy</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="sell-product-form container">
+            <h2>Sell Your Farming Product</h2>
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" name="productName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productCategory">Category:</label>
+                    <select id="productCategory" name="productCategory">
+                        <option value="vegetables">Vegetables</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="other">Other</option> 
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="productPrice">Price (Rs per kg):</label>
+                    <input type="number" id="productPrice" name="productPrice" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productImage">Upload Product Image:</label>
+                    <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productDescription">Description:</label>
+                    <textarea id="productDescription" name="productDescription"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Submit Product</button>
+                </div>
+            </form>
+
+            <div id="result"></div> 
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Farm Fresh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="sell_product.js"></script>
+</body>
+</html>

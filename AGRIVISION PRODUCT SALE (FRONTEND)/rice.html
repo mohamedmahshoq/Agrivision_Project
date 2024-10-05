@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="rice.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="farm fresh.png" alt="Farm Fresh Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://www.example.com/vegetables/">Vegetables</a></li>
+                    <li><a href="https://www.example.com/fruits/">Fruits</a></li>
+                    <li><a href="https://www.example.com/dairy/">Dairy</a></li>
+                    <li><a href="sell_product.html" class="sell-product-btn">Sell Product</a></li> <!-- Added button -->
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Jamshed Town, Karachi">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="txt" placeholder="Find Fresh Produce...">
+                <i class="fa-solid fa-search" onclick="search()"></i>
+            </div>
+        </div>
+    </header>
+    <div class="product-container">
+        <div class="images">
+            <img src="img1.jpeg" alt="rice">
+            
+        </div>
+
+        <div class="product-details">
+            <h1> RICE (ponni)</h1>
+            <p class="original-price">MRP: <span class="strikethrough">₹60.89</span></p>
+            <h2 class="price">Price: <span>₹47.73</span> (₹47.73 / kg)</h2>
+            <p class="discount">You Save: <span>24% OFF</span></p>
+            <p class="taxes">(inclusive of all taxes)</p>
+
+            <div class="buttons">
+                <button class="add-to-cart">Add to cart</button>
+                <button class="save-for-later">Buy now</button>
+            </div>
+
+            <h3>Pack sizes</h3>
+            <div class="pack-options">
+                <label class="pack-option">
+                    <input type="radio" name="pack-size" value="1kg" checked>
+                    <span>1 kg</span>
+                    <span class="pack-price">₹36.78</span> (₹36.78 / kg)
+                    <span class="pack-discount">24% OFF</span>
+                </label>
+
+                <label class="pack-option">
+                    <input type="radio" name="pack-size" value="300g">
+                    <span>300 g</span>
+                    <span class="pack-price">₹12.49</span> (₹0.04 / g)
+                    <span class="pack-discount">24% OFF</span>
+                </label>
+
+                <label class="pack-option">
+                    <input type="radio" name="pack-size" value="500g">
+                    <span>500 g</span>
+                    <span class="pack-price">₹19.43</span> (₹0.04 / g)
+                    <span class="pack-discount">24% OFF</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <p>&copy; 2024 Farm Fresh. All Rights Reserved.</p>
+</footer>
+
+</html>

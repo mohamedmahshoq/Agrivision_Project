@@ -1,0 +1,14 @@
+Soil Type,pH,Rainfall (mm),Temperature (°C),Crop Recommended
+Alluvial,6.5,1000,25,Wheat
+Alluvial,6.8,1200,27,Rice
+Alluvial,6.3,800,24,Chickpea
+Black,7.0,900,26,Sugar Cane
+Black,6.5,750,22,Wheat
+Red,6.0,600,28,Citrus Fruits
+Red,5.8,700,30,Mango
+Arid,7.5,400,35,Cotton
+Arid,6.8,300,32,Wheat
+Forest and Mountain,6.2,1500,20,Tea
+Forest and Mountain,6.5,1600,18,Coffee
+Desert,7.0,200,38,Millet
+Desert,7.2,250,36,Barley
